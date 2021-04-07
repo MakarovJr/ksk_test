@@ -1,34 +1,163 @@
 <!DOCTYPE html>
 <html lang="RU">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KSK Test</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/index.js"></script>
-</head>
-<body>
-    <header>
-        <div class="header__container container">
-            <h1 class="header__title">Тестовое задание</h1>
-        </div>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <h1 class="header__title">Тестовое задание</h1>
+      </div>
     </header>
-    <main class="main">
-        <section class="">
-            <button>ДОБАВИТЬ</button>
-            <div>
-                <h2>Filters</h2>
-                <form action="">
-                    <label for="filter">Invoice number</label>
-                    <input id="filter" type="text">
-                </form>
+    <main class="main main__container">
+      <section class="control">
+        <button class="control__btn">ДОБАВИТЬ</button>
+        <div class="control__sort shadow">
+          <div class="sort__accordion" id="accordion">
+            <h3 class="sort__accordion-title">
+              Sorting
+              <span class="sort__accordion-title-icon"></span>
+            </h3>
+            <div class="sort__accordion-btns">
+              <p class="sort__accordion-btn">Sort by invoice: ascending</p>
+              <p class="sort__accordion-btn">Sort by invoice: descending</p>
             </div>
-        </section>
-        <section class=""></section>
+          </div>
+        </div>
+      </section>
+      <section class="orders">
+        <div class="order__filter">
+          <h2 class="order__filter-title">Filters</h2>
+          <form class="order__filter-form" action="">
+            <label class="order__filter-form-label" for="filter"
+              >Invoice number</label
+            >
+            <input
+              class="order__filter-form-input"
+              id="filter"
+              type="text"
+              placeholder="Enter value"
+            />
+          </form>
+        </div>
+        <div class="order__cards">
+          <ul class="order__card-list">
+            <li class="order__card-item">
+              <article class="order__card shadow">
+                <div class="card__header">
+                  <h3 class="card__title">Card 1</h3>
+                  <button class="card__menu" data-path="one"></button>
+                  <ul class="card__menu-list" data-target="one">
+                    <li class="card__menu-item card__menu-item-edit">
+                      редактировать
+                    </li>
+                    <li class="card__menu-item card__menu-item-rm">удалить</li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <span class="card-content-text">A</span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                </div>
+              </article>
+            </li>
+            <li class="order__card-item">
+              <article class="order__card shadow">
+                <div class="card__header">
+                  <h3 class="card__title">Card 2</h3>
+                  <button class="card__menu" data-path="two"></button>
+                  <ul class="card__menu-list" data-target="two">
+                    <li class="card__menu-item card__menu-item-edit">
+                      редактировать
+                    </li>
+                    <li class="card__menu-item card__menu-item-rm">удалить</li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <span class="card-content-text">B</span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                </div>
+              </article>
+            </li>
+            <li class="order__card-item">
+              <article class="order__card shadow">
+                <div class="card__header">
+                  <h3 class="card__title">Card 3</h3>
+                  <button class="card__menu" data-path="three"></button>
+                  <ul class="card__menu-list" data-target="three">
+                    <li class="card__menu-item card__menu-item-edit">
+                      редактировать
+                    </li>
+                    <li class="card__menu-item card__menu-item-rm">удалить</li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <span class="card-content-text">C</span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                </div>
+              </article>
+            </li>
+            <li class="order__card-item">
+              <article class="order__card shadow">
+                <div class="card__header">
+                  <h3 class="card__title">Card 4</h3>
+                  <button class="card__menu" data-path="four"></button>
+                  <ul class="card__menu-list" data-target="four">
+                    <li class="card__menu-item card__menu-item-edit">
+                      редактировать
+                    </li>
+                    <li class="card__menu-item card__menu-item-rm">удалить</li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <span class="card-content-text">D</span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                </div>
+              </article>
+            </li>
+            <li class="order__card-item">
+              <article class="order__card shadow">
+                <div class="card__header">
+                  <h3 class="card__title">Card 5</h3>
+                  <button class="card__menu" data-path="five"></button>
+                  <ul class="card__menu-list" data-target="five">
+                    <li class="card__menu-item card__menu-item-edit">
+                      редактировать
+                    </li>
+                    <li class="card__menu-item card__menu-item-rm">удалить</li>
+                  </ul>
+                </div>
+                <div class="card-content">
+                  <span class="card-content-text">E</span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                  <span class="card-content-text content"></span>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
-    <footer>
 
-    </footer>
-</body>
+    <script src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </body>
 </html>
